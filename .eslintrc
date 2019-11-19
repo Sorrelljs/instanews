@@ -1,0 +1,25 @@
+{
+    "extends": "eslint:recommended",
+    "rules": {
+        "no-alert": 1,
+        "camelcase": 1,
+        "curly": 1,
+        "eqeqeq": 1,
+        "no-console": 1,
+        "guard-for-in": 1,
+        "no-empty": 1,
+        "no-param-reassign": 1,
+        "no-unused-vars": 1,
+        "quotes": [ 1, "single"],
+        "no-extra-parens": 1,
+        "no-extra-semi": 1
+    },
+    "globals":{ 
+        "$": true
+    },
+    "parserOptions": {
+        "emcaVersion": 2019
+    },
+    "env": true,
+    "browser": true
+}
