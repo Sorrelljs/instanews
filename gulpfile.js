@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     terser = require("gulp-terser"),
     rename = require("gulp-rename"),
     sass = require('gulp-sass'),
@@ -12,13 +12,10 @@ let browserSync = require("browser-sync").create();
 gulp.task('scripts', function(){
     //return gulp 
   return gulp.src('./js/*.js')
-    .pipe(terser())
     .pipe(eslint())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(gulp.dest('./build/js'))
     .pipe(eslint.format())
-    .pipe(eslint.fallAfterError())
-    .pipe(Terser({toplevel: true})) // call the terser function on these files
+    .pipe(eslint.failAfterError())
+    .pipe(terser({toplevel: true})) // call the terser function on these files
     .pipe(rename({ extname: '.min.js'})) // rename the uglifeted file
     .pipe(gulp.dest('./build/js'));
 

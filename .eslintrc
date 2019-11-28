@@ -15,11 +15,15 @@
         "no-extra-semi": 1
     },
     "globals":{ 
-        "$": true
+        "$": true,
+        "jQuery": true
     },
     "parserOptions": {
-        "emcaVersion": 2019
+        "ecmaVersion": 2019,
+        "sourceType": "module"
     },
-    "env": true,
-    "browser": true
+    "env": {
+        "browser": true,
+        "node": true
+    }
 }
