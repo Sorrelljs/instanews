@@ -32,12 +32,12 @@ gulp.task('browser-sync', function() {
 
 gulp.task('sass' , function() {
     return gulp
-    .src('./sass/*.scss')
+    .src('./sass/styles.scss')
     .pipe(sass())
     //plugins
     .pipe(autoprefixer())
     .pipe(cssnano())
-    .pipe(gulp.dest('./bulid/css'));
+    .pipe(gulp.dest('./build/css'));
     
 });
 

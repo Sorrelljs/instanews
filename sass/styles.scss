@@ -1,35 +1,49 @@
+@import "./css-reset.scss";
+@import "./fonts.scss";
 
 $widthPercent : width 100%;
+//$font: ‘open sans’, sans-serif, ‘Arial’;
+
+
 
 body {
     background-color: black;
+    font-family: 'Open Sans';
+    background-color: #000;
+    font-family: Open Sans;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
-
-
 
 
 
 .container1 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     padding-top: 12rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 4rem;
+    grid-gap: 3rem;
 }
 
 
+h1.section-choice {
+padding-bottom: 2rem;
+}
+
+
+
 .logo {
-    width: 400px;
-    height: 400px;
- 
-        
+    height: 400px;  
 }
 
 
 .section-choice {
     color: white;
-    font-size: 35px;
-    font-family: open-sa;
-  
+    font-size: 35px;  
 }
 
 
@@ -38,48 +52,58 @@ body {
     width: 50%;
 } 
 
+select.myList {
+    margin: 0 auto;
+    display: block;
+}
+
  /****  body - form - main ****/
 
 
- .picture {
-     height: 35em;
-     width: 100%;
-     position: relative; 
 
-    }
+ul {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-columns: auto;
+    height: 100%;
+}
 
-    img{
-        height: 100%;  
-       width: 100%; 
 
-  
- }
+li {
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
 
- figcaption {
-       
-    font-size: 35px;
-    color: white;
-    background-color: black;
+
+figcaption {
+    bottom: 0;
     position: absolute;
+    height: 24%;
+    width: 100%;
+    background-color: rgba(0, 0, 0 , 0.5);
+    color: #ffffff;
+    font-size: 36px;
+}
+
+
+
+
+ 
+
+// SCSS AFTER LINKED THE JSON DATA TO WEBSITE USINGS SECTIONS
+
+
+a {
+    text-decoration: none;
+
     bottom: 0;
     width: 100%;
     height: 100px;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
-   
-    }
-
-
- ul {
-    width: 100%;
-    padding-top: 3em; /*maybe not a good idea but works */
-
-
- li {
-
-    width: 100%;
- }
-
- }
+}
 
 
  /***************  FOOTER   *******/
@@ -95,4 +119,3 @@ body {
     font-size: 34px;
     
 }
-

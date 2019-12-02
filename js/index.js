@@ -40,7 +40,7 @@ class newsClass {
         }
 
         render(){
-               $('.news-feed').append('<li><a href=' + this.url + '"target"=_blank><img src="' + this.img + '" <figcaption>' + this.abstract + '</figcaption> </li>')
+               $('.news-feed').append('<li class="card" style="background-image: url(' + this.img + ')"><a href=' + this.url + '"target"=_blank> <figcaption>' + this.abstract + '</figcaption> </li>')
 
         }
 };
@@ -66,8 +66,9 @@ $("select").on('change', function(event){
                 method: 'GET',
                 url: urlKey + option + apiKey
          }).done(function(data){
-                console.log(data);
-                for (let i=0; i < 5; i++) {
+
+                $('.news-feed').text('');
+                for (let i=0; i < 8; i++) {
                         let newArticle = new newsClass(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract);
                         newArticle.render();
                 }
