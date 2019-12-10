@@ -80,10 +80,9 @@ $("select").on('change', function(event){
 
 
 
- // sections for dropdown
 sections.forEach(element => {
         myList.append('<option value="' + element + '">' + element + '</option>');
-})// myList.on('change', apiCall)
+})
 
 
 
