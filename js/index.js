@@ -40,7 +40,14 @@ class newsClass {
         }
 
         render(){
-               $('.news-feed').append('<li class="card" style="background-image: url(' + this.img + ')"><a href=' + this.url + '"target"=_blank> <figcaption>' + this.abstract + '</figcaption> </li>')
+        //        $('.news-feed').append('<li class="card" style="background-image: url(' + this.img + ')"><a href=' + this.url + ' "target"=_blank></a> <figcaption>' + this.abstract + '</figcaption> </li>')
+               $('.news-feed').append(`
+                        <li class="card" style="background-image: url('${this.img}')">
+                                <a href="${this.url}" target="_blank">
+                                        <figcaption>${this.abstract}</figcaption>
+                                </a>
+                        </li>
+                `)
 
         }
 };
@@ -66,7 +73,8 @@ $("select").on('change', function(event){
                 method: 'GET',
                 url: urlKey + option + apiKey
          }).done(function(data){
-
+                 console.log()
+                $(".container1").removeClass("container1--empty");
                 $('.news-feed').text('');
                 for (let i=0; i < 8; i++) {
                         let newArticle = new newsClass(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract);
@@ -77,13 +85,15 @@ $("select").on('change', function(event){
 
 
 
+// a element 100% height + 100% width 
+
+
 
 
 
 sections.forEach(element => {
         myList.append('<option value="' + element + '">' + element + '</option>');
 })
-
 
 
 
