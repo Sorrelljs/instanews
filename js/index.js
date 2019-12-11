@@ -76,7 +76,20 @@ $("select").on('change', function(event){
                  console.log()
                 $(".container1").removeClass("container1--empty");
                 $('.news-feed').text('');
-                for (let i=0; i < 8; i++) {
+                $(".logo").addClass("small-logo");
+                $(".small-logo").removeClass("logo");
+
+
+                /*
+                $(".container1").addClass("container1-desktop");
+                $(".container1-desktop").removeClass("container1");
+
+                */
+
+
+
+
+                for (let i=0; i < 12; i++) {
                         let newArticle = new newsClass(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract);
                         newArticle.render();
                 }
