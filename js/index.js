@@ -73,18 +73,11 @@ $("select").on('change', function(event){
                 method: 'GET',
                 url: urlKey + option + apiKey
          }).done(function(data){
-                 console.log()
                 $(".container1").removeClass("container1--empty");
                 $('.news-feed').text('');
                 $(".logo").addClass("small-logo");
                 $(".small-logo").removeClass("logo");
 
-
-                /*
-                $(".container1").addClass("container1-desktop");
-                $(".container1-desktop").removeClass("container1");
-
-                */
 
 
 
@@ -98,7 +91,7 @@ $("select").on('change', function(event){
 
 
 
-// a element 100% height + 100% width 
+
 
 
 
@@ -115,10 +108,6 @@ sections.forEach(element => {
 
 
 
-
-      // get abstract into figcaption
-      // get image (4) into IMG
-      // provide url 
 
 
 }); // document ready ending

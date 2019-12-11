@@ -104,7 +104,33 @@ h1.section-choice {
 
 .section-select {
     padding: 16px 0 0 0; 
-    padding-left: 40px;
+    padding-left: 30px;
+    padding-bottom: 16px;
+
+    @include desktop {
+     
+        .section-choice {
+         padding-bottom: 10px;
+        }
+    }
+
+
+}
+
+@include desktop {
+.news-feed {
+  
+    grid-row-gap: 0.5em;
+    grid-column-gap: 1em;
+}
+}
+
+@include tablet {
+    .news-feed {
+        
+        grid-row-gap: 0.5em;
+        grid-column-gap: 1em;
+    }
 }
 
 ul {
@@ -120,6 +146,7 @@ ul {
     @include desktop {
         grid-template-columns: auto auto auto auto;
         grid-auto-columns: auto auto auto;
+        
     }
     
 }
