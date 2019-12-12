@@ -55,6 +55,12 @@ class newsClass {
 
 
     $( document ).ready(function() {
+        sections.forEach(element => {
+                myList.append('<option value="' + element + '">' + element + '</option>');
+                
+        })
+                $('select').niceSelect();
+        
         
                 // pulling data from nyt 
  $.ajax({
@@ -73,12 +79,21 @@ $("select").on('change', function(event){
                 method: 'GET',
                 url: urlKey + option + apiKey
          }).done(function(data){
+
+              
                 $(".container1").removeClass("container1--empty");
                 $('.news-feed').text('');
                 $(".logo").addClass("small-logo");
                 $(".small-logo").removeClass("logo");
+                
+                $('.myList').on('click')
 
+                $('.wrapper').slideUp("slow");
+                $('.wrapper').slideDown("slow");
+               
 
+               
+            
 
 
 
@@ -97,9 +112,6 @@ $("select").on('change', function(event){
 
 
 
-sections.forEach(element => {
-        myList.append('<option value="' + element + '">' + element + '</option>');
-})
 
 
 
