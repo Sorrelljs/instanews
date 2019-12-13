@@ -35,6 +35,23 @@ left: 43%;
 margin: auto;
 background: #0000006e;
 border-radius: 4em;
+
+@include tablet {
+  height: 4em;
+  left: 13%;
+  margin: 10px;
+}
+
+@include desktop {
+position: absolute;
+height: 6em;
+left: 43%;
+margin: auto;
+background: #0000006e;
+border-radius: 4em;
+
+}
+
 }
 
 .container1 {
