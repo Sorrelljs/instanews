@@ -28,6 +28,15 @@ body {
   background-color: #000;
 }
 
+.loader {
+position: absolute;
+height: 6em;
+left: 43%;
+margin: auto;
+background: #0000006e;
+border-radius: 4em;
+}
+
 .container1 {
   display: flex;
   align-items: center;
@@ -78,7 +87,7 @@ h1.section-choice {
 
 .myList {
   background-color: white;
-  width: 65%;
+  width: 90%;
 }
 
 .card:hover {

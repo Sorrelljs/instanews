@@ -9,7 +9,7 @@ let sections = [
         "fashion",
         "food",
         "health",
-        "home",
+        "home",     
         "insider",
         "magazine",
         "movies",
@@ -31,6 +31,11 @@ let sections = [
 ];
 
 let myList = $('.myList');
+
+
+$(".loader").hide();
+
+
 
 class newsClass {
         constructor(url, img, abstract){
@@ -59,28 +64,25 @@ class newsClass {
                 myList.append('<option value="' + element + '">' + element + '</option>');
                 
         })
-                $('select').niceSelect();
+
+                // ^ this is for the select menu 
+        $('select').niceSelect();
         
         
-                // pulling data from nyt 
- $.ajax({
-        method: 'GET',
-        url: 'https://api.nytimes.com/svc/topstories/v2/science.json?api-key=0hGoPGeduATqFtOZvZb587v8yQsnU7yh'
-      }).done(function(data) {
-              console.log(data);
-              $.each(data, function(){
-      });     
-    });
-                // listening for a change in titles ( to direct the right json)
+                
+
+    //^pulling JSON data from api
+
 $("select").on('change', function(event){
         let option = event.target.value;
+        $(".loader").show();
 
         $.ajax({
                 method: 'GET',
                 url: urlKey + option + apiKey
          }).done(function(data){
 
-              
+                $(".loader").hide();
                 $(".container1").removeClass("container1--empty");
                 $('.news-feed').text('');
                 $(".logo").addClass("small-logo");
