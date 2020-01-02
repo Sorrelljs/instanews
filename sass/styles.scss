@@ -55,7 +55,12 @@ body {
   margin: 2rem;
 	height: 300px;
 	@include tablet {
-		height: 100px;
+    height: 100px;
+    margin: 0;
+  }
+  @include desktop {
+    height: 100px;
+    margin: 0;
 	}
 }
 
