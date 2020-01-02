@@ -59,21 +59,16 @@ body {
     margin: 0;
   }
   @include desktop {
+    justify-content: flex-start;
     height: 100px;
     margin: 0;
 	}
 }
 
-@include tablet {
-	.wrapper {
+.wrapper {
+  @include tablet {
 		display: flex;
 		align-items: center;
-	}
-}
-
-@include desktop {
-	.container1 {
-		justify-content: flex-start;
 	}
 }
 
@@ -90,10 +85,10 @@ h1.section-choice {
 	height: 11em;
 }
 
-@include tablet {
-	.small-logo {
-		height: 4em;
-	}
+.small-logo{
+  @include tablet {
+      height: 4em;
+  }
 }
 
 .section-choice {
