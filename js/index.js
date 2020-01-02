@@ -1,5 +1,7 @@
+import { MY_KEY } from "./config";
+
 let urlKey = 'https://api.nytimes.com/svc/topstories/v2/'
-let apiKey = '.json?api-key=0hGoPGeduATqFtOZvZb587v8yQsnU7yh';
+let apiKey = '.json?api-key=';
 let sections = [
     'arts',
     'automobiles',
@@ -74,7 +76,7 @@ $(document).ready(function() {
         $('.loader').show();
         $.ajax({
             method: 'GET',
-            url: urlKey + option + apiKey
+            url: urlKey + option + apiKey + MY_KEY
         }).done(function(data) {
             $('.loader').hide();
             $('.fail').removeClass('fail-show');
