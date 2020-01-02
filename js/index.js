@@ -1,5 +1,4 @@
-import { MY_KEY } from "./config";
-
+import { MY_KEY } from './config.min.js';
 let urlKey = 'https://api.nytimes.com/svc/topstories/v2/'
 let apiKey = '.json?api-key=';
 let sections = [
