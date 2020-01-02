@@ -132,7 +132,7 @@ h1.section-choice {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  
+
   @include tablet {
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 0.5em;
@@ -149,20 +149,20 @@ h1.section-choice {
 }
 
 .fail{
+  display: none;
+  background-color: yellow;
+  text-align: center;
+  font-weight: 800;
+  p{
+    padding: 2rem;
+  }
+}
+
+.fail-show{
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-area: span 1;
-  background-color: yellow;
-  text-align: center;
-  height: 4rem;
-  font-weight: 800;
-  @include tablet {
-    grid-area: span 3;
-  }
-  @include desktop {
-    grid-area: span 4;
-  }
+  
 }
 
 .card {

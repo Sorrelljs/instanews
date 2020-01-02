@@ -77,6 +77,7 @@ $(document).ready(function() {
             url: urlKey + option + apiKey
         }).done(function(data) {
             $('.loader').hide();
+            $('.fail').removeClass('fail-show');
             $('.container1').removeClass('container1--empty');
             $('.news-feed').text('');
             $('.logo').addClass('small-logo');
@@ -84,12 +85,7 @@ $(document).ready(function() {
             $('.myList').on('click')
             $('.wrapper').slideUp('slow');
             $('.wrapper').slideDown('slow');
-            console.log(data);
-        //     for (let i = 0; i < 12; i++) {
-                // let newArticle = new newsClass(data.results[i].url, data.results[i].multimedia[4].url, data.results[i].abstract);
-                createNewsCards(data, $('.news-feed'));
-                // newArticle.render();
-        //     }
+            createNewsCards(data, $('.news-feed'));
         }).fail(function() {
             $('.loader').hide();
             $('.container1').removeClass('container1--empty');
@@ -99,7 +95,7 @@ $(document).ready(function() {
             $('.myList').on('click')
             $('.wrapper').slideUp('slow');
             $('.wrapper').slideDown('slow');
-            $('.news-feed').append('<li class="fail"><img class="warning-icon">Fail to load... Try again</li>');
+            $('.fail').addClass('fail-show');
         });
     })
 
