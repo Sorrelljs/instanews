@@ -18,3 +18,7 @@ npm-debug.log
 # Parcel
 .cache
 dist
+
+# Files
+config.js
+config.min.js
