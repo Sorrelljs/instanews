@@ -21,3 +21,8 @@ If you want to clone the repo and try yourself, you should follow this steps:
 6. Enjoy your news!
 
 
+### Learning
+
+A great learning curve on how to use AJAX and API's. I used the API from NYT news. I then manipulated the information that i wanted and inserted it accordingly. 
+
+
