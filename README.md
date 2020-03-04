@@ -5,7 +5,7 @@ This page consists of different news articles provided by NY Times. The user wil
 
 
 
-![](insta-news.gif)
+![](Insta-news.gif)
 
 
 
